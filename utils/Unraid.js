@@ -566,8 +566,8 @@ async function simplifyResponse(object, ip, auth) {
     newVMObject.hddAllocation = {};
     newVMObject.hddAllocation.all = [];
     newVMObject.hddAllocation.total = vm.parent.children[4].contents;
-    if (vm.child.children[0].children[0].children[1].children) {
-      vm.child.children[0].children[0].children[1].children.forEach(driveDetails => {
+    if (vm.child.children[0].children[0].children[0].children) {
+      vm.child.children[0].children[0].children[0].children.forEach(driveDetails => {
         let detailsArr = driveDetails.children.map(drive => {
           return drive.contents;
         });
